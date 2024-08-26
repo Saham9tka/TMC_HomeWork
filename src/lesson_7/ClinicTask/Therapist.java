@@ -10,7 +10,6 @@ public class Therapist extends Doctor {
         System.out.println("The therapist has treated the cold. Wishing you good health!");
     }
 
-
     public static void chTreatmentPlan(Patient patient, Doctor[] clinic){
         switch (showTreatmentPlan()){
             case 1 -> patient.setTreatment(1, clinic[0]);

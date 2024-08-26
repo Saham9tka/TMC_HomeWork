@@ -2,7 +2,8 @@ package lesson_7.ClinicTask;
 
 import java.util.Scanner;
 
-public class Doctor {
+public class Doctor
+{
     private final String DoctorType;
     private final String Name;
     Doctor(String doctorType, String name){
