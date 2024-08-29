@@ -1,4 +1,4 @@
-import Animal.Animal;
+import Animal.*;
 
 public class MyMain {
         public static void main(String[] args) {
@@ -7,18 +7,18 @@ public class MyMain {
             Animal tiger = new Tiger();
             Animal rabbit = new Rabbit();
 
-            // Тестирование методов
-            dog.voice(); // Собака издает звук
-            dog.eat("Meat"); // Собака ест мясо
-            dog.eat("Grass"); // Собака не любит траву
 
-            tiger.voice(); // Тигр издает звук
-            tiger.eat("Meat"); // Тигр ест мясо
-            tiger.eat("Grass"); // Тигр не любит траву
+            dog.voice();
+            dog.eat("Meat");
+            dog.eat("Grass\n");
 
-            rabbit.voice(); // Кролик издает звук
-            rabbit.eat("Grass"); // Кролик ест траву
-            rabbit.eat("Meat"); // Кролик не любит мясо
+            tiger.voice();
+            tiger.eat("Meat");
+            tiger.eat("Grass\n");
+
+            rabbit.voice();
+            rabbit.eat("Grass");
+            rabbit.eat("Meat");
         }
 
 }
