@@ -1,6 +1,6 @@
 package Task1;
 
-interface Role {
+interface Disposition {
     void GiveTitle();
     void doResponsibilities();
 }

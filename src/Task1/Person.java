@@ -1,6 +1,6 @@
 package Task1;
 
-public abstract class Person implements Role {
+public abstract class Person implements Disposition {
     private final String name;
     private final String role;
 
