@@ -2,16 +2,16 @@ package Task1;
 
 public abstract class Person implements Disposition {
     private final String name;
-    private final String role;
+    private final String title;
 
-    Person(String name, String role) {
+    Person(String name, String title) {
         this.name = name;
-        this.role = role;
+        this.title = title;
     }
 
     @Override
     public final void GiveTitle() {
-        System.out.println(this.name + "'s title is \"" + this.role + "\"...");
+        System.out.println(this.name + "'s title is \"" + this.title + "\"...");
     }
 
 }
