@@ -1,12 +1,9 @@
 import Task1.*;
 import Task2.*;
-
-
 public class Main {
     public static void main(String[] args) {
         showInterface();
         showFigures();
-
     }
 
     public static void showInterface() {
