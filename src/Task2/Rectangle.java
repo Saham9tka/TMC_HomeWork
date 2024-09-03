@@ -17,7 +17,7 @@ public class Rectangle extends Figure {
     }
     @Override
     public String toString() {
-        return "Your figure is Rectangle" + "\nIts sides are equal: " + "\nLength =" + this.length +
-                "\nWidth =" + this.width + "\nIts perimeter is: " + getPerimeter() + "\nIts square is: " + getSquare();
+        return "Your figure is a Rectangle" + "\n sides are:" + "\nLength = " + this.length + "\nWidth = " + this.width +
+                "\n perimeter is: " + getPerimeter() + "\n area is: " + getSquare();
     }
 }

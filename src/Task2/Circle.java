@@ -15,7 +15,7 @@ public class Circle extends Figure {
     }
     @Override
     public String toString() {
-        return "Your figure is Circle" + "\n radius is: " + this.radius +
-                "\n perimeter is: " + getPerimeter() + "\n square is: " + getSquare();
-    }
-}
+        return String.format("Your figure is a Circle" + "\nRadius = %.2f" + "\nPerimeter (Circumference) = %.2f" +
+                        "\nArea = %.2f",
+                this.radius, getPerimeter(), getSquare());
+}}
