@@ -11,9 +11,9 @@ public class Main {
 
     public static void showInterface() {
         Person[] people = new Person[]{
-                new Director("Archil"),
-                new Accountant("Elena"),
-                new Worker("Alexander")
+                new Director("Atom"),
+                new Accountant("Ksenia"),
+                new Worker("Omar")
         };
         for (Person person : people) {
             person.GiveTitle();
@@ -35,9 +35,9 @@ public class Main {
         for (Figure figure : figures) {
             System.out.println(figure);
             sumPerimeter += figure.getPerimeter();
-           System.out.println("________________________________________________");
+           System.out.println();
         }
-        System.out.println("Total perimeter of shapes equals: " + sumPerimeter);
+        System.out.println("Total perimeter of shapes: " + sumPerimeter);
     }
 
 }
