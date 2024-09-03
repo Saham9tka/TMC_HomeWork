@@ -5,5 +5,7 @@ public class Worker extends Person{
         super(name, "Worker");}
     @Override
     public void doResponsibilities() {
-        System.out.println("The worker is in charge of different activities.");}
+
+        System.out.println("The worker is in charge of different activities.");
+    }
 }
