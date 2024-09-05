@@ -20,5 +20,6 @@ public class Main {
 
             System.out.println(users[0].equals(users[1]));
             System.out.println(users[1].equals(users[2]));
+            System.out.println(users[0].equals(users[2]));
         }
 }
