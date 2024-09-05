@@ -18,8 +18,8 @@ public class Main {
                 System.out.println("____________________________");
             }
 
-            System.out.println(users[0].equals(users[1]));
-            System.out.println(users[1].equals(users[2]));
-            System.out.println(users[0].equals(users[2]));
+            System.out.println("1 && 2 " + users[0].equals(users[1]));
+            System.out.println("2 && 3 " + users[1].equals(users[2]));
+            System.out.println("1 && 3 " + users[0].equals(users[2]));
         }
 }
