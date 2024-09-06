@@ -82,14 +82,14 @@ public class StringOperations {
     }
 
     private static void findUniqueCharactersWord(String str1, String str2, String str3) {
-        String[] words1 = str1.split("\\s+");
-        String[] words2 = str2.split("\\s+");
-        String[] words3 = str3.split("\\s+");
+         String[] words1 = str1.split("\\s+");
+         String[] words2 = str2.split("\\s+");
+         String[] words3 = str3.split("\\s+");
 
         for (String word : words1) {
             if (hasUniqueCharacters(word)) {
                 System.out.println(word);
-                return; // Выходим после нахождения первого слова
+                return;
             }
         }
         for (String word : words2) {
