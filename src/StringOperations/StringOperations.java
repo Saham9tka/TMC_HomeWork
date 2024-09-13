@@ -1,6 +1,5 @@
- package StringOperations;
+package StringOperations;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class StringOperations {
@@ -60,9 +59,16 @@ public class StringOperations {
 
     private static void sortStringsByLength(String str1, String str2, String str3) {
         String[] strings = {str1, str2, str3};
-        Arrays.sort(strings, (s1, s2) -> s1.length() - s2.length());
-        for (String str : strings) {
-            System.out.println(str);
+        for (int i = 0; i < strings.length - 1; i++) {
+            for (int j = i + 1; j < strings.length; j++) {
+                if (strings[i].length() > strings[j].length()) {
+                    String temp = strings[i];
+                    strings[i] = strings[j];
+                    strings[j] = temp;
+                }
+            }
+        }
+        for (String str : strings) {            System.out.println(str);
         }
     }
 
@@ -82,29 +88,41 @@ public class StringOperations {
     }
 
     private static void findUniqueCharactersWord(String str1, String str2, String str3) {
-         String[] words1 = str1.split("\\s+");
-         String[] words2 = str2.split("\\s+");
-         String[] words3 = str3.split("\\s+");
-
-        for (String word : words1) {
-            if (hasUniqueCharacters(word)) {
-                System.out.println(word);
-                return;
-            }
+        String wordWithUniqueChars = findWordWithUniqueChars(str1);
+        if (wordWithUniqueChars != null) {
+            System.out.println(wordWithUniqueChars);
+            return;
         }
-        for (String word : words2) {
-            if (hasUniqueCharacters(word)) {
-                System.out.println(word);
-                return;
-            }
+        wordWithUniqueChars = findWordWithUniqueChars(str2);
+        if (wordWithUniqueChars != null) {
+            System.out.println(wordWithUniqueChars);
+            return;
         }
-        for (String word : words3) {
-            if (hasUniqueCharacters(word)) {
-                System.out.println(word);
-                return;
-            }
+        wordWithUniqueChars = findWordWithUniqueChars(str3);
+        if (wordWithUniqueChars != null) {
+            System.out.println(wordWithUniqueChars);
+            return;
         }
         System.out.println("Слова с уникальными символами не найдены.");
+    }
+
+    private static String findWordWithUniqueChars(String str) {
+        int start = 0;
+        int end = 0;
+        while (end < str.length()) {
+            while (end < str.length() && str.charAt(end) == ' ') {
+                end++;
+            }
+            start = end;
+            while (end < str.length() && str.charAt(end) != ' ') {
+                end++;
+            }
+            String word = str.substring(start, end);
+            if (hasUniqueCharacters(word)) {
+                return word;
+            }
+        }
+        return null;
     }
 
     private static boolean hasUniqueCharacters(String word) {
@@ -119,11 +137,8 @@ public class StringOperations {
     }
 
     private static void duplicateCharacters(String str) {
-        StringBuilder sb = new StringBuilder();
-        for (char ch : str.toCharArray()) {
-            sb.append(ch).append(ch);
+        for (int i = 0; i < str.length(); i++) {
+            System.out.print(str.charAt(i) + "" + str.charAt(i));
         }
-        System.out.println(sb.toString());
     }
 }
-
