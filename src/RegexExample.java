@@ -11,7 +11,7 @@ public class RegexExample {
         System.out.println("Аббревиатуры:");
         findAbbreviations(input);
     }
-    private static void findAbbreviations(String input) {
+    static void findAbbreviations(String input) {
         String pattern = "[A-Z]{2,6}";
         Pattern regex = Pattern.compile(pattern);
         Matcher matcher = regex.matcher(input);
