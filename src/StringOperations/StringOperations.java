@@ -14,24 +14,24 @@ public class StringOperations {
 
         scanner.close();
 
-        // 1. Самая короткая и самая длинная строки
-        System.out.println("n1. Самая короткая и самая длинная строки:");
+        // 1. Short and Longest
+        System.out.println("#1. Самая короткая и самая длинная строки:");
         findShortestAndLongest(str1, str2, str3);
 
-        // 2. Упорядоченные строки по длине
-        System.out.println("n2. Упорядоченные строки по длине:");
+        // 2. ByLength
+        System.out.println("#2. Упорядоченные строки по длине:");
         sortStringsByLength(str1, str2, str3);
 
-        // 3. Строки короче средней длины
-        System.out.println("n3. Строки короче средней длины:");
+        // 3. ShortThan
+        System.out.println("#3. Строки короче средней длины:");
         findShorterThanAverage(str1, str2, str3);
 
-        // 4. Слово с разными символами
-        System.out.println("n4. Слово с разными символами:");
+        // 4. Unique
+        System.out.println("#4. Слово с разными символами:");
         findUniqueCharactersWord(str1, str2, str3);
 
-        // 5. Дублирование каждой буквы
-        System.out.println("n5. Дублирование каждой буквы:");
+        // 5. Dublicate
+        System.out.println("#5. Дублирование каждой буквы:");
         duplicateCharacters(str1);
     }
 
