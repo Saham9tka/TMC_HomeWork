@@ -4,10 +4,10 @@ import java.util.Scanner;
 
 public class UserReg {
     public static void main(String[] args) {
-        registration();
+        registr();
     }
 
-    static void registration() {
+    static void registr() {
         System.out.print("Please enter your login: ");
         String login = getScanner();
         System.out.print("Please enter your password: ");
