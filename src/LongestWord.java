@@ -1,34 +1,36 @@
-import java.;
+import java.io.*;
 
 public class LongestWord {
 
     public static void main(String[] args) {
         try {
-            File inputFile = new File("Romeo and Julietta.txt");
-            BufferedReader reader = new BufferedReader(new FileReader(inputFile));
+            String longestWord = findLongestWord("C:/Users/saham/IdeaProjects/TMC_HomeWork/src/RomeoAndJulietta.txt");
+            saveWord("longest_word.txt", longestWord);
+            System.out.println("The longest word is written to the new file. This word is: " + longestWord);
+        } catch (IOException e) {
+            System.out.println("Error: " + e.getMessage());
+        }
+    }
 
-            String longestWord = "";
-            String currentWord;
-
-            while ((currentWord = reader.readLine()) != null) {
-                String[] words = currentWord.split("[\\s.,;?!]+");
+    public static String findLongestWord(String myFile) throws IOException {
+        String longestWord = "";
+        try (BufferedReader reader = new BufferedReader(new FileReader(myFile))) {
+            String line;
+            while ((line = reader.readLine()) != null) {
+                String[] words = line.split("[\\s.,;?!]+");
                 for (String word : words) {
                     if (word.length() > longestWord.length()) {
                         longestWord = word;
                     }
                 }
             }
-            reader.close();
+        }
+        return longestWord;
+    }
 
-            File outputFile = new File("longest_word.txt");
-            BufferedWriter writer = new BufferedWriter(new FileWriter(outputFile));
-            writer.write(longestWord);
-            writer.close();
-
-            System.out.println("\n" + "Longest word: " + longestWord);
-
-        } catch (IOException e) {
-            System.err.println("Er1ror: " + e.getMessage());
+    public static void saveWord(String newFile, String word) throws IOException {
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(newFile))) {
+            writer.write(word);
         }
     }
 }
