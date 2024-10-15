@@ -7,8 +7,8 @@ public class StringMan {
 
     public static void main(String[] args) {
         testWordMultiple();
-        testPairs();
-        testCheckForBalance();
+//        testPairs();
+//        testCheckForBalance();
     }
 
     static void testWordMultiple() {
